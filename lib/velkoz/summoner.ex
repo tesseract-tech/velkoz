@@ -4,7 +4,7 @@ defmodule Velkoz.Summoner do
 
   def byName(region, summonerName)do
     Velkoz.Region.baseUrl(region) <> "/api/lol/#{region}/v#{getVersion}/summoner/by-name/#{summonerName}"
-    |>Velkoz.get
+    |>Velkoz.get(region)
   end
 
   def getVersion() do

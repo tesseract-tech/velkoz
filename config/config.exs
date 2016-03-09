@@ -22,7 +22,9 @@ config :velkoz,
    status_version: "1.3",
    summoner_version: "1.4",
    team_version: "2.4",
-   lol_api_key: System.get_env("LOL_API_KEY")
+   lol_api_key: System.get_env("LOL_API_KEY"),  #Get your api key from the leage website
+   lol_time_frame:  Integer.parse(System.get_env("LOL_TIME_FRAME")), # default time from league should be 10000000
+   lol_request_limit: Integer.parse(System.get_env("LOL_REQUEST_LIMIT")) # default reqest limit should be 500
 
 # You can configure for your application as:
 #
