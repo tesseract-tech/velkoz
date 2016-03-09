@@ -7,6 +7,7 @@ defmodule Velkoz.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     test_coverage: [tool: Coverex.Task, coveralls: true, ignore_modules: []],
      deps: deps]
   end
 
@@ -29,7 +30,8 @@ defmodule Velkoz.Mixfile do
   defp deps do
     [
       {:httpotion, "~> 2.2.0"},
-      {:ex_rated, "~> 1.2.1"}
+      {:ex_rated, "~> 1.2.1"},
+      {:coverex, "~> 1.4.7", only: :test}
   ]
   end
 end
