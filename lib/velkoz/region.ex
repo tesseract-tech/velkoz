@@ -1,13 +1,8 @@
 defmodule Velkoz.Region do
 
-  def baseUrl(region) do
+  @regions ["br","eune","euw","kr","lan","las","na","oce","tr","ru","pbe","global"]
 
-        case region do
-           "na" ->
-             "https://na.api.pvp.net"
-           "eune"->
-               "https://eune.api.pvp.net"
-        end
-
-    end
+  def base_url(region) when region in @regions do
+        "https://#{region}.api.pvp.net"
+  end
 end

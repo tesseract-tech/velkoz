@@ -9,7 +9,7 @@ defmodule Velkoz do
 
     case ExRated.check_rate( region, time_fame, request_limit ) do
       { :ok, _ }->
-        HTTPotion.get  "#{url}?api_key=#{@api_key}"
+          Velkoz.Client.get!("#{url}?api_key=#{@api_key}").body
       { :error, _ }->
         { :error, "You have hit the rate limit" }
     end

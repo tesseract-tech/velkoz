@@ -7,7 +7,6 @@ defmodule Velkoz.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     test_coverage: [tool: Coverex.Task, coveralls: true, ignore_modules: []],
      deps: deps]
   end
 
@@ -15,7 +14,7 @@ defmodule Velkoz.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger,:ex_rated,:httpotion]]
+    [applications: [:logger,:ex_rated,:httpoison]]
   end
 
   # Dependencies can be Hex packages:
@@ -29,9 +28,9 @@ defmodule Velkoz.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpotion, "~> 2.2.0"},
+      {:httpoison, "~> 0.8.0"},
       {:ex_rated, "~> 1.2.1"},
-      {:coverex, "~> 1.4.7", only: :test}
+      {:poison, "~> 2.1"}
   ]
   end
 end
