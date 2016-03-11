@@ -1,7 +1,7 @@
 defmodule Velkoz.Summoner do
  import Velkoz.Region
   @doc """
-    Get summoner objects mapped by standardized summoner name for a given list of summoner names
+    https://developer.riotgames.com/api/methods#!/1061/3663
   """
   def by_name(region, summonerName)do
     build_url(region) <> "summoner/by-name/#{summonerName}"
@@ -9,10 +9,34 @@ defmodule Velkoz.Summoner do
   end
 
   @doc """
-  Get Summoner Objects mapped by summonerID for a given list of summonerIDs
+  https://developer.riotgames.com/api/methods#!/1061/3664
   """
   def by_ids(region, summonerIds)do
     build_url(region) <> "summoner/#{summonerIds}"
+    |>Velkoz.get(region)
+  end
+
+  @doc """
+  https://developer.riotgames.com/api/methods#!/1061/3665
+  """
+  def masteries(region, summonerIds)do
+    build_url(region) <> "summoner/#{summonerIds}/masteries"
+    |>Velkoz.get(region)
+  end
+
+  @doc """
+  https://developer.riotgames.com/api/methods#!/1061/3662
+  """
+  def name(region, summonerId)do
+    build_url(region) <> "summoner/#{summonerId}/name"
+    |>Velkoz.get(region)
+  end
+
+  @doc """
+  https://developer.riotgames.com/api/methods#!/1061/3660
+  """
+  def runes(region, summonerId)do
+    build_url(region) <> "summoner/#{summonerId}/runes"
     |>Velkoz.get(region)
   end
 
