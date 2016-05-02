@@ -8,6 +8,10 @@ defmodule Velkoz.Utility do
         "https://#{region}.api.pvp.net"
   end
 
+  def status_url() do
+    "https://status.leagueoflegends.com"
+  end
+
   @doc """
     returns platform_id provides the region is valid
   """

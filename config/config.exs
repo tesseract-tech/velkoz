@@ -23,7 +23,7 @@ config :velkoz,
    summoner_version: "1.4",
    team_version: "2.4",
    platform_ids: %{br: "BR1",eune: "EUN1", euw: "EUW1",kr: "KR",lan: "LA1", las: "LA2", na: "NA1",oce: "OC1", tr: "TR1",ru: "RU", pbe: "PBE1"},
-   regions: ["br","eune","euw","kr","lan","las","na","oce","tr","ru","pbe","global"],
+   regions: ["br","eune","euw","kr","lan","las","na","oce","tr","ru","pbe","global","status"],
    game_types: ["RANKED_SOLO_5x5","RANKED_TEAM_3x3","RANKED_TEAM_5x5"],
    lol_api_key: System.get_env("LOL_API_KEY"),  #Get your api key from the leage website
    lol_time_frame:  String.to_integer(System.get_env("LOL_TIME_FRAME")), # default time from league should be 10000000
