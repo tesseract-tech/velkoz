@@ -13,7 +13,7 @@ defmodule Velkoz.Champion do
   returns a list of free to play champions
   """
   def get(region, free_to_play) when free_to_play == true do
-    build_url(region) <> "/champion?freeToPlay=true&"
+    build_url(region) <> "/champion?freeToPlay=true"
     |>Velkoz.get(region)
   end
 

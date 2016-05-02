@@ -13,12 +13,12 @@ defmodule Velkoz do
     final_url =
     case String.contains?(url, "?")  do
       true ->
-        url <> "api_key=" <> @api_key
+        url <> "&api_key=" <> @api_key
       _ ->
         url <> "?api_key=" <> @api_key
     end
-
-    Velkoz.Client.get!(final_url).body
+    # IO.puts final_url
+    Velkoz.Client.get!(final_url)
   end
 
   @doc """
