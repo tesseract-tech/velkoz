@@ -4,7 +4,7 @@ defmodule VelkozSaticDataTest do
 
   @region "na"
   @champion_id "122"
-  @item_id "1411"
+  @item_id "2009"
   @mastery_id "6121"
   @rune_id "5235"
   @summoner_spell "12"
